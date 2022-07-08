@@ -14,16 +14,16 @@
     <div class="header__bc">
         <div class="wrap">
             <header class="header">
-                <div class="logo">
+                <a href="../../index.html" class="logo">
                     <h1 class="logo__title">Cozy House</h1>
                     <p class="logo__subtitle">Shelter for pets in Boston</p>
-                </div>
+                </a>
                 <nav class="nav">
                     <ul class="nav__menu">
-                        <li class="nav__link">About the shelter</li>
+                        <li class="nav__link"><a href="../../index.html">About the shelter</a></li>
                         <li class="nav__link nav__link_active">Our pets</li>
-                        <li class="nav__link">Help the shelter</li>
-                        <li class="nav__link">Contacts</li>
+                        <li class="nav__link"><a href="../../index.html#help">Help the shelter</a></li>
+                        <li class="nav__link"><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
             </header>
@@ -103,16 +103,16 @@
                     </div>
                 </div>
                 <div class="nav-btns">
-                    <button class="nav-btns__btn btn_not-active">&lt;&lt;</button>
-                    <button class="nav-btns__btn btn_not-active">&#60;</button>
+                    <button class="nav-btns__btn border-btn_hover" id="btn_not-active" disabled>&lt;&lt;</button>
+                    <button class="nav-btns__btn border-btn_hover" id="btn_not-active" disabled>&#60;</button>
                     <button class="nav-btns__btn btn_fill">1</button>
-                    <button class="nav-btns__btn">&gt;</button>
-                    <button class="nav-btns__btn">&gt;&gt;</button>
+                    <button class="nav-btns__btn border-btn_hover">&gt;</button>
+                    <button class="nav-btns__btn border-btn_hover">&gt;&gt;</button>
                 </div>
             </div>
         </section>
     </main>
-
+    <a name="contacts"></a>
     <section class="frame-1280">
         <footer class="footer">
             <div class="wrap">
@@ -121,27 +121,27 @@
                         <div class="contacts__head">
                             <h2>For questions and suggestions</h2>
                         </div>
-                        <div class="contacts__mail contacts_center">
+                        <a href="mailto:email@shelter.com" class="contacts__mail contacts_center">
                             <img src="../../img/icon-email.svg" alt="email icon">
-                            <a class="content__text" href="mailto:email@shelter.com">email@shelter.com</a>
-                        </div>
-                        <div class="contacts__phone contacts_center">
+                            <p class="content__text">email@shelter.com</p>
+                        </a>
+                        <a href="tel:+136745677554" class="contacts__phone contacts_center">
                             <img src="../../img/icon-phone.svg" alt="phone icon">
-                            <a class="content__text" href="tel:+136745677554">+13 674 567 75 54</a>
-                        </div>
+                            <p class="content__text">+13 674 567 75 54</p>
+                        </a>
                     </div>
                     <div class="location content_flex">
                         <div class="location__head">
                             <h2>We are waiting for your visit</h2>
                         </div>
-                        <div class="location__address contacts_center">
+                        <a href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585519,-71.0569203,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263" target="_blank" class="location__address contacts_center">
                             <img src="../../img/icon-pin.svg" alt="pin icon">
                             <p class="content__text">1 Central Street, Boston (entrance from the store)</p>
-                        </div>
-                        <div class="location__address contacts_center">
+                        </a>
+                        <a href="https://www.google.com/maps/search/18+South+Park,+London/@51.4799683,-0.2481955,11z/data=!3m1!4b1" target="_blank" class="location__address contacts_center">
                             <img src="../../img/icon-pin.svg" alt="pin icon">
                             <p class="content__text">18 South Park, London</p>
-                        </div>
+                        </a>
                     </div>
                     <img src="../../img/footer-puppy.png" alt="puppy show it's paw">
                 </div>

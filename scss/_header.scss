@@ -26,6 +26,12 @@
 
 .nav__link {
     color: $postersub-color;
+    a {
+        transition: .5s;
+    }
+    &:hover a {
+        color: $active-nav-color;
+    }
 }
 
 .nav__link_active {

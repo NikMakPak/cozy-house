@@ -139,9 +139,13 @@
         background-color: $primar-color;
         border-radius: 9px;
         padding: 10px 0;
+        transition: $animation-time;
         p {
             font-size: 20px;
             line-height: 23px;
+        }
+        &:hover {
+            background-color: $hover-color;
         }
     }
     .content__info {
@@ -152,3 +156,5 @@
         color: $hell-text-color;
     }
 }
+
+@import "global";

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="../../normalize.css">
+    <link rel="stylesheet" href="./pages/main/main.css">
+    <link rel="stylesheet" href="normalize.css">
     <title>Main</title>
 </head>
 
@@ -15,16 +15,16 @@
         <div class="welcome">
             <div class="wrap">
                 <header class="header">
-                    <div class="logo">
+                    <a href="index.html" class="logo">
                         <h1 class="logo__title">Cozy House</h1>
                         <p class="logo__subtitle">Shelter for pets in Boston</p>
-                    </div>
+                    </a>
                     <nav class="nav">
                         <ul class="nav__menu">
                             <li class="nav__link nav__link_active">About the shelter</li>
-                            <li class="nav__link">Our pets</li>
-                            <li class="nav__link">Help the shelter</li>
-                            <li class="nav__link">Contacts</li>
+                            <li class="nav__link"><a href="./pages/pets/index.html">Our pets</a></li>
+                            <li class="nav__link"><a href="#help">Help the shelter</a></li>
+                            <li class="nav__link"><a href="#contacts">Contacts</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -34,9 +34,9 @@
                             <h2>Not only people <br>need a house</h2>
                         </div>
                         <p class="tagline__subhead">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                        <button type="submit" class="btn">Make a friend</button>
+                        <button type="submit" onclick="window.location.href='#friend'" class="btn">Make a friend</button>
                     </div>
-                    <img src="../../img/start-screen-puppy.png" alt="a dog is waiting owner">
+                    <img src="./img/start-screen-puppy.png" alt="a dog is waiting owner">
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
     <main class="frame-1280">
         <section class="about">
             <div class="wrap">
-                <img src="../../img/about-pets.png" height="408px" alt="pet and cat together">
+                <img src="./img/about-pets.png" height="408px" alt="pet and cat together">
                 <div class="content">
                     <div class="content__head">
                         <h2>About the shelter <br> “Cozy House”</h2>
@@ -56,6 +56,7 @@
 
             </div>
         </section>
+        <a name="friend"></a>
         <section class="pets">
             <div class="wrap">
                 <div class="content">
@@ -64,10 +65,11 @@
                     </div>
 
                     <div class="slider">
-                        <img class="slider__arrow-left arrow" src="../../img/button_arrow.png" alt="arrow left">
+                        <button class="slider__arrow border-btn_hover">&#8592;</button>
+                        <!-- <img class="slider__arrow" src="./img/button_arrow.png" alt="arrow left"> -->
                         <div class="slider__wrap">
                             <div class="card">
-                                <img src="../../img/pets-katrine.png" alt="pet">
+                                <img src="./img/pets-katrine.png" alt="pet">
                                 <div class="card__name">
                                     <h2>Katrine</h2>
                                 </div>
@@ -75,7 +77,7 @@
                             </div>
 
                             <div class="card">
-                                <img src="../../img/pets-jennifer.png" alt="pet">
+                                <img src="./img/pets-jennifer.png" alt="pet">
                                 <div class="card__name">
                                     <h2>Jennifer</h2>
                                 </div>
@@ -83,51 +85,52 @@
                             </div>
 
                             <div class="card">
-                                <img src="../../img/pets-woody.png" alt="pet">
+                                <img src="./img/pets-woody.png" alt="pet">
                                 <div class="card__name">
                                     <h2>Woody</h2>
                                 </div>
                                 <button type="submit" class="btn card__btn">Learn more</button>
                             </div>
                         </div>
-
-                        <img class="slider__arrow-right arrow" src="../../img/button_arrow.png" alt="arrow left">
+                        <button class="slider__arrow border-btn_hover">&#8594;</button>
+                        <!-- <img class="slider__arrow" src="./img/button_arrow.png" alt="arrow left"> -->
                     </div>
 
-                    <button type="submit" class="btn">Get to know the rest</button>
+                    <button onclick="window.location.href='./pages/pets/index.html'" type="submit" class="btn">Get to know the rest</button>
                 </div>
         </section>
+        <a name="help"></a>
         <section class="help">
             <div class="wrap">
                 <div class="head">
                     <h2>How you can help<br> our shelter</h2>
                 </div>
                 <ul class="help-list">
-                    <li class="elem"><img src="../../img/icon-pet-food.svg" alt="">
+                    <li class="elem"><img src="./img/icon-pet-food.svg" alt="">
                         <p>Pet food</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-transportation.svg" alt="">
+                    <li class="elem"><img src="./img/icon-transportation.svg" alt="">
                         <p>Transportation</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-toys.svg" alt="">
+                    <li class="elem"><img src="./img/icon-toys.svg" alt="">
                         <p>Toys</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-bowls-and-cups.svg" alt="">
+                    <li class="elem"><img src="./img/icon-bowls-and-cups.svg" alt="">
                         <p>Bowls and cups</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-shampoos.svg" alt="">
+                    <li class="elem"><img src="./img/icon-shampoos.svg" alt="">
                         <p>Shampoos</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-vitamins.svg" alt="">
+                    <li class="elem"><img src="./img/icon-vitamins.svg" alt="">
                         <p>Vitamins</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-medicines.svg" alt="">
+                    <li class="elem"><img src="./img/icon-medicines.svg" alt="">
                         <p>Medicines</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-collars-leashes.svg" alt="">
+                    <li class="elem"><img src="./img/icon-collars-leashes.svg" alt="">
                         <p>Collars / leashes</p>
                     </li>
-                    <li class="elem"><img src="../../img/icon-sleeping-area.svg" alt="">
+                    <li class="elem"><img src="./img/icon-sleeping-area.svg" alt="">
                         <p>Sleeping areas</p>
                     </li>
                 </ul>
@@ -135,22 +138,23 @@
         </section>
         <section class="donation">
             <div class="wrap">
-                <img src="../../img/donation-dog.png" alt="cute dog for making donation">
+                <img src="./img/donation-dog.png" alt="cute dog for making donation">
                 <div class="content">
                     <div class="content__head">
                         <h2>You can also make a donation</h2>
                     </div>
                     <p class="content__subhead">Name of the bank / Type of bank account</p>
-                    <div class="credit-card">
-                        <img src="../../img/credit-card.svg" alt="credit card">
+                    <a href="#" class="credit-card">
+                        <img src="./img/credit-card.svg" alt="credit card">
                         <p class="credit-card__numbers">8380 2880 8028 8791 7435</p>
-                    </div>
+                    </a>
                     <p class="content__info">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis
                         in faucibus.</p>
                 </div>
             </div>
         </section>
     </main>
+    <a name="contacts"></a>
     <section class="frame-1280">
         <footer class="footer">
             <div class="wrap">
@@ -159,29 +163,29 @@
                         <div class="contacts__head">
                             <h2>For questions and suggestions</h2>
                         </div>
-                        <div class="contacts__mail contacts_center">
-                            <img src="../../img/icon-email.svg" alt="email icon">
-                            <a class="content__text" href="mailto:email@shelter.com">email@shelter.com</a>
-                        </div>
-                        <div class="contacts__phone contacts_center">
-                            <img src="../../img/icon-phone.svg" alt="phone icon">
-                            <a class="content__text" href="tel:+136745677554">+13 674 567 75 54</a>
-                        </div>
+                        <a href="mailto:email@shelter.com" class="contacts__mail contacts_center">
+                            <img src="./img/icon-email.svg" alt="email icon">
+                            <p class="content__text">email@shelter.com</p>
+                        </a>
+                        <a href="tel:+136745677554" class="contacts__phone contacts_center">
+                            <img src="./img/icon-phone.svg" alt="phone icon">
+                            <p class="content__text">+13 674 567 75 54</p>
+                        </a>
                     </div>
                     <div class="location content_flex">
                         <div class="location__head">
                             <h2>We are waiting for your visit</h2>
                         </div>
-                        <div class="location__address contacts_center">
-                            <img src="../../img/icon-pin.svg" alt="pin icon">
+                        <a href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585519,-71.0569203,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263" target="_blank" class="location__address contacts_center">
+                            <img src="./img/icon-pin.svg" alt="pin icon">
                             <p class="content__text">1 Central Street, Boston (entrance from the store)</p>
-                        </div>
-                        <div class="location__address contacts_center">
-                            <img src="../../img/icon-pin.svg" alt="pin icon">
+                        </a>
+                        <a href="https://www.google.com/maps/search/18+South+Park,+London/@51.4799683,-0.2481955,11z/data=!3m1!4b1" target="_blank" class="location__address contacts_center">
+                            <img src="./img/icon-pin.svg" alt="pin icon">
                             <p class="content__text">18 South Park, London</p>
-                        </div>
+                        </a>
                     </div>
-                    <img src="../../img/footer-puppy.png" alt="puppy show it's paw">
+                    <img src="./img/footer-puppy.png" alt="puppy show it's paw">
                 </div>
             </div>
         </footer>

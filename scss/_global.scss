@@ -38,6 +38,8 @@ $active-nav-color:#FAFAFA;
 $content-head-txt-color:#545454;
 $bg-section-color:#F6F6F6;
 $hell-text-color:#B2B2B2;
+$hover-color:#FDDCC4;
+$animation-time:.5s;
 // global styles ====================================
 .frame-1280 {
     @include flex-center(cross);
@@ -64,6 +66,24 @@ h2 {
     line-height: 22px;
     color: $btn-txt-color;
     cursor: pointer;
+    transition: $animation-time;
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+.border-btn_hover {
+    transition: $animation-time;
+    &:hover {
+        background-color: $hover-color;
+        border-color: $hover-color;
+    }
+}
+
+#btn_not-active {
+    pointer-events: none;
+    border: 2px solid #CDCDCD;
+    color: $postersub-color;
 }
 
 img {

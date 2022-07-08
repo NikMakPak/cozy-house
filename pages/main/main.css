@@ -37,6 +37,28 @@ h2 {
   line-height: 22px;
   color: #292929;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #FDDCC4;
+}
+
+.border-btn_hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.border-btn_hover:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
+#btn_not-active {
+  pointer-events: none;
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
 }
 
 img {
@@ -87,6 +109,15 @@ img {
 
 .nav__link {
   color: #CDCDCD;
+}
+
+.nav__link a {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav__link:hover a {
+  color: #FAFAFA;
 }
 
 .nav__link_active {
@@ -170,6 +201,7 @@ img {
 }
 
 .card {
+  cursor: pointer;
   width: 270px;
   height: 435px;
   display: -webkit-box;
@@ -183,8 +215,19 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
-  background: #FAFAFA;
+  background-color: #FAFAFA;
   border-radius: 9px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.card:hover {
+  background-color: #fff;
+}
+
+.card:hover .card__btn {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
 }
 
 .card .card__btn {
@@ -208,18 +251,33 @@ img {
   margin: 0 53px;
 }
 
-.arrow {
-  cursor: pointer;
-  height: 52px;
-}
-
-.slider__arrow-right {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
 .btn {
   width: 261px;
+}
+
+.slider__arrow {
+  cursor: pointer;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 20px;
+  line-height: 23px;
+  color: #292929;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
 }
 
 .welcome {
@@ -438,11 +496,17 @@ img {
   background-color: #F1CDB3;
   border-radius: 9px;
   padding: 10px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .donation .credit-card p {
   font-size: 20px;
   line-height: 23px;
+}
+
+.donation .credit-card:hover {
+  background-color: #FDDCC4;
 }
 
 .donation .content__info {
@@ -454,5 +518,77 @@ img {
   font-size: 11px;
   line-height: 18px;
   color: #B2B2B2;
+}
+
+.frame-1280 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 35px;
+  line-height: 45px;
+  color: #545454;
+}
+
+.btn {
+  background: #F1CDB3;
+  border-radius: 100px;
+  width: 207px;
+  height: 52px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 17px;
+  line-height: 22px;
+  color: #292929;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: #FDDCC4;
+}
+
+.border-btn_hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.border-btn_hover:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
+
+#btn_not-active {
+  pointer-events: none;
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrap {
+  margin: 80px 40px 100px 40px;
 }
 /*# sourceMappingURL=main.css.map */
