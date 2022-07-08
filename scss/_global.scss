@@ -53,7 +53,12 @@ $bg-section-color:#F6F6F6;
 $hell-text-color:#B2B2B2;
 $hover-color:#FDDCC4;
 $animation-time:.5s;
+$popup-bg-color:rgba(41, 41, 41, 0.6);
 // global styles ====================================
+html {
+    scroll-behavior: smooth;
+}
+
 .frame {
     max-width: 1280px;
     margin: auto;

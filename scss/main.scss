@@ -94,7 +94,9 @@
         }
     }
     .tagline__subhead {
-        text-align: center;
+        @media (max-width: 768px) {
+            text-align: center;
+        }
         margin: 42px 0;
         @include fontArial();
         letter-spacing: normal;

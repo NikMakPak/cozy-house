@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .frame {
   max-width: 1280px;
   margin: auto;
@@ -137,6 +141,19 @@ img {
           transform: rotate(-90deg);
 }
 
+.burger-bg {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 823px;
+  background-color: rgba(41, 41, 41, 0.6);
+  z-index: 1;
+  -webkit-transition: opacity 0.5s, right 0s;
+  transition: opacity 0.5s, right 0s;
+}
+
 .burger__sidebar {
   position: fixed;
   overflow: auto;
@@ -189,6 +206,7 @@ img {
 
 .sidebar_active {
   right: 0;
+  opacity: 1;
 }
 
 .nav__menu {
@@ -597,7 +615,6 @@ img {
 }
 
 .welcome .tagline__subhead {
-  text-align: center;
   margin: 42px 0;
   font-family: 'Arial';
   font-style: normal;
@@ -608,6 +625,12 @@ img {
   font-size: 15px;
   line-height: 24px;
   width: 460px;
+}
+
+@media (max-width: 768px) {
+  .welcome .tagline__subhead {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {

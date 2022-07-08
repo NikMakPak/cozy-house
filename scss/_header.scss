@@ -96,6 +96,18 @@ $animation-time:.5s;
     transform: rotate(-90deg);
 }
 
+.burger-bg {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 823px;
+    background-color: $popup-bg-color;
+    z-index: 1;
+    transition: opacity $animation-time, right 0s;
+}
+
 .burger__sidebar {
     position: fixed;
     overflow: auto;
@@ -135,6 +147,7 @@ $animation-time:.5s;
 
 .sidebar_active {
     right: 0;
+    opacity: 1;
 }
 
 .nav__menu {
