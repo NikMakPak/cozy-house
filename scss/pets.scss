@@ -31,6 +31,19 @@
     letter-spacing: 0.06em;
 }
 
+@mixin smooth-adaptive($css, $startSize, $minSize, $minScreen, $maxWidthContainer) {
+    $addSize: $startSize - $minSize;
+    #{$css}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+        #{$css}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minScreen + px}) / #{$maxWidthContainer - $minScreen}));
+    }
+}
+
+@mixin smooth-adaptive-num($css, $startSize, $minSize, $minScreen, $maxWidthContainer) {
+    $addSize: $startSize - $minSize;
+    #{$css}:calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minScreen + px}) / #{$maxWidthContainer - $minScreen}));
+}
+
 // variables ====================================
 $primar-color:#F1CDB3;
 $main-color:#fff;
@@ -49,16 +62,22 @@ body {
 }
 
 .header__bc {
-    width: 1280px;
+    // width: 1280px;
     margin: 0 auto;
     position: sticky;
     top: 0px;
-    height: 120px;
+    // height: 120px;
     background-color: $main-color;
     @include fontArial();
     color: $content-head-txt-color;
     .wrap {
         margin: 30px 40px;
+        @media (max-width: 1280px) {
+            margin: 30px;
+        }
+        @media (max-width: 768px) {
+            margin: 30px 10px 30px;
+        }
     }
     .logo__title {
         color: $content-head-txt-color;
@@ -75,16 +94,48 @@ body {
     .nav__link_active {
         color: $btn-txt-color;
     }
+    .burger__sidebar {
+        background: $content-head-txt-color;
+        .nav__link {
+            color: $postersub-color;
+            a {
+                transition: .5s;
+            }
+            &:hover a {
+                color: $active-nav-color;
+            }
+        }
+        .nav__link_active {
+            border-bottom: 3px solid $primar-color;
+            color: $active-nav-color;
+        }
+    }
+    .sidebar__shadow {
+        background: $content-head-txt-color;
+        box-shadow: 0px 12px 80px 88px $content-head-txt-color;
+    }
+    @media (min-width: 1280px) {
+        width: 1280px;
+    }
+    @include smooth-adaptive('width', 1280, 768, 768, 1280)
 }
 
 .pets {
     background-color: $bg-section-color;
-    height: 1342px;
-    width: 100%;
+    // height: 1342px;
+    // width: 100%;
     .wrap {
         @include flex-center(cross);
         flex-direction: column;
         gap: 45px;
+        @media (max-width: 1280px) {
+            gap: 30px;
+            padding: 80px 30px 75px;
+        }
+        @media (max-width: 768px) {
+            padding: 42px 10px;
+            gap: 42px;
+        }
         .head {
             text-align: center;
         }
@@ -93,16 +144,36 @@ body {
         display: flex;
         gap: 20px;
         margin-top: 15px;
+        @media (max-width: 1280px) {
+            margin-top: 10px;
+        }
+        @media (max-width: 768px) {
+            gap: 10px;
+            margin-top: 0;
+        }
     }
     .cards {
         width: 100%;
         margin-top: 15px;
+        @media (max-width: 1280px) {
+            margin: 0;
+        }
     }
     .slider__wrap {
         justify-content: center;
         margin: 0;
         gap: 30px 40px;
         flex-wrap: wrap;
+    }
+    @media (max-width: 1280px) {
+        .card:nth-last-child(-n+2) {
+            display: none;
+        }
+    }
+    @media (max-width: 768px) {
+        .card:nth-last-child(-n+5) {
+            display: none;
+        }
     }
 }
 
@@ -121,6 +192,23 @@ body {
 }
 
 .btn_fill {
+    pointer-events: none;
     background-color: $primar-color;
     border: none;
 }
+
+.footer {
+    @media (min-width: 1280px) {
+        width: 1280px;
+    }
+    @include smooth-adaptive('width', 1280, 768, 768, 1280);
+    @media (max-width: 768px) {
+        .content {
+            .contacts_flex {
+                margin: 0;
+            }
+        }
+    }
+}
+
+// исправление адаптив

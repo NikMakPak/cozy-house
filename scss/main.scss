@@ -2,22 +2,81 @@
 @import "header";
 @import "footer";
 @import "slider-cards";
-// main frame-1280 ====================================
+@mixin smooth-adaptive($css, $startSize, $minSize, $minScreen, $maxWidthContainer) {
+    $addSize: $startSize - $minSize;
+    #{$css}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+        #{$css}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minScreen + px}) / #{$maxWidthContainer - $minScreen}));
+    }
+}
+
+@mixin smooth-adaptive-num($css, $startSize, $minSize, $minScreen, $maxWidthContainer) {
+    $addSize: $startSize - $minSize;
+    #{$css}:calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minScreen + px}) / #{$maxWidthContainer - $minScreen}));
+}
+
+// main frame ====================================
 .welcome {
-    width: 100%;
-    height: 908px;
-    background: url(../../img/header-background.png);
+    background: url("../../img/noise_lines_transparent@2X.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     @include fontArial();
     color: $main-color;
     .wrap {
-        margin: 60px 40px 0 40px;
+        padding: 60px 40px 0px 40px;
+        @media (max-width: 1280px) {
+            padding: 30px 30px 0 30px;
+        }
+        @media (max-width: 768px) {
+            padding: 30px 10px 0 10px;
+        }
     }
     .poster {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        @media (max-width: 1280px) {
+            .btn_center {
+                text-align: center;
+            }
+            gap: 100px;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            gap: 105px;
+            @include smooth-adaptive-num('gap',
+            100,
+            105,
+            320,
+            768);
+        }
         margin-top: 60px;
+        img {
+            @include smooth-adaptive('width',
+            698,
+            569,
+            768,
+            1280);
+            @media (max-width: 1280px) {
+                margin-left: 140px;
+            }
+            @media (max-width: 768px) {
+                margin-left: 40px;
+                @include smooth-adaptive-num('width',
+                569,
+                260,
+                320,
+                768);
+            }
+        }
     }
     .tagline {
+        @media (max-width: 1280px) {
+            margin-top: 0;
+        }
+        @include smooth-adaptive('width',
+        460,
+        300,
+        320,
+        768);
         margin-top: 163px;
         width: 460px;
         .btn {
@@ -25,24 +84,32 @@
         }
     }
     .tagline__head h2 {
-        letter-spacing: normal;
         color: $main-color;
         font-size: 44px;
         line-height: 57px;
+        letter-spacing: -0.01em;
+        @media (max-width: 768px) {
+            font-size: 25px;
+            line-height: 32px;
+        }
     }
     .tagline__subhead {
+        text-align: center;
         margin: 42px 0;
         @include fontArial();
         letter-spacing: normal;
         color: $postersub-color;
         font-size: 15px;
         line-height: 24px;
+        @include smooth-adaptive('width',
+        460,
+        300,
+        320,
+        768);
     }
 }
 
 .about {
-    width: 100%;
-    height: 588px;
     background-color: #fff;
     @include fontArial();
     letter-spacing: normal;
@@ -50,19 +117,49 @@
     line-height: 24px;
     color: $txt-color;
     .wrap {
-        margin: 72px 0 100px 0;
+        .content__img {
+            @include smooth-adaptive('width',
+            300,
+            260,
+            320,
+            768);
+            @include smooth-adaptive('height',
+            408,
+            354,
+            320,
+            768);
+            @media (max-width: 768px) {
+                margin-top: -4px;
+            }
+        }
         @include flex-center(main);
+        flex-wrap: wrap-reverse;
+        @media (max-width: 1280px) {
+            flex-direction: column-reverse;
+        }
+        @media (max-width: 768px) {
+            padding: 42px 25px;
+        }
         align-items: center;
         gap: 120px;
+        @include smooth-adaptive('gap',
+        120,
+        80,
+        768,
+        1280);
     }
     .content {
         display: flex;
         flex-direction: column;
         gap: 25px;
-        width: 430px;
+        max-width: 430px;
+        @media (max-width: 768px) {
+            gap: 23px;
+        }
     }
     .content:nth-child(2) {
-        margin: 25px 0;
+        // margin: 25px 0;
+        margin: 0;
     }
 }
 
@@ -71,12 +168,41 @@
         text-align: center;
     }
     width: 100%;
-    height: 877px;
     background-color: $bg-section-color;
     .content {
         @include flex-center(cross);
         flex-direction: column;
         gap: 60px;
+    }
+    .card:nth-child(3) {
+        @media (max-width: 1280px) {
+            display: none;
+        }
+    }
+    @media (max-width: 768px) {
+        .card:nth-child(2),
+        .slider__arrow {
+            display: none;
+        }
+    }
+    .sliders__arrow_mobile {
+        display: none;
+        @media (max-width: 768px) {
+            @include flex-center(cross);
+            margin-top: 20px;
+            gap: 80px;
+            .arrow_mobile {
+                display: block;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .slider {
+            flex-direction: column;
+        }
+        .content {
+            gap: 42px;
+        }
     }
 }
 
@@ -84,58 +210,119 @@
     .wrap {
         text-align: center;
     }
-    height: 611px;
     background-color: $main-color;
     .head {
         margin-bottom: 60px;
+        @media (max-width: 1280px) {
+            margin-bottom: 57px;
+        }
+        @media (max-width: 768px) {
+            margin-bottom: 36px;
+        }
     }
     .help-list {
+        width: 1030px;
         @include flex-center(main);
         flex-wrap: wrap;
         gap: 52px 120px;
-        height: 281px;
-        width: 1030px;
+        margin: auto;
+        @media (max-width: 1280px) {
+            gap: 55px 60px;
+            width: 630px;
+        }
+        @media (max-width: 768px) {
+            gap: 30px;
+            width: 290px;
+            justify-content: start;
+        }
         .elem {
+            @media (max-width: 1280px) {
+                width: 170px;
+                height: 113px;
+            }
+            @media (max-width: 768px) {
+                width: 130px;
+                height: 87px;
+            }
             img {
-                margin-bottom: 30px;
+                margin-bottom: 26px;
+                @media (max-width: 768px) {
+                    margin-bottom: 20px;
+                    width: 50px;
+                }
             }
             p {
                 @include fontGeorgia();
                 font-size: 20px;
                 line-height: 23px;
                 color: $content-head-txt-color;
+                @media (max-width: 768px) {
+                    font-size: 15px;
+                    line-height: 17px;
+                    text-align: center;
+                }
             }
         }
     }
 }
 
 .donation {
-    height: 462px;
     background-color: $bg-section-color;
+    height: auto;
     .wrap {
-        margin: 80px 182px 100px 183px;
+        text-align: left;
         @include flex-center(cross);
         gap: 0 30px;
+        @media (max-width: 1280px) {
+            flex-direction: column-reverse;
+            gap: 60px;
+        }
+        @media (max-width: 768px) {
+            text-align: center;
+            align-items: center;
+            gap: 42px;
+        }
+        justify-content: center;
+        flex-wrap: wrap-reverse;
     }
     .content {
         display: flex;
         flex-direction: column;
         gap: 20px 0;
-        text-align: left;
+        @media (max-width: 768px) {
+            align-items: center;
+        }
     }
     .content__head {
-        width: 300px;
+        max-width: 300px;
+    }
+    .content__img {
+        @include smooth-adaptive('width',
+        505,
+        260,
+        320,
+        768);
     }
     p {
         @include fontGeorgia();
         font-size: 15px;
         line-height: 17px;
         color: $content-head-txt-color;
+        @media (max-width: 768px) {
+            letter-spacing: normal;
+            line-height: 24px;
+        }
     }
     .credit-card {
         @include flex-center(main);
+        align-items: center;
         gap: 15px;
-        width: 349px;
+        @include smooth-adaptive('width',
+        349,
+        281,
+        320,
+        768);
+        max-width: 349px;
         background-color: $primar-color;
         border-radius: 9px;
         padding: 10px 0;
@@ -143,6 +330,11 @@
         p {
             font-size: 20px;
             line-height: 23px;
+            @media (max-width: 768px) {
+                font-size: 15px;
+                line-height: 17px;
+                letter-spacing: 0.06em;
+            }
         }
         &:hover {
             background-color: $hover-color;
@@ -154,7 +346,50 @@
         font-size: 11px;
         line-height: 18px;
         color: $hell-text-color;
+        max-width: 380px;
+        @media (max-width: 768px) {
+            letter-spacing: 0.03em;
+            padding: 0 10px;
+        }
     }
 }
 
-@import "global";
+// .header {
+//     height: 60px;
+// }
+// about
+// .about .content:nth-child(2) {
+//     margin: 0;
+// }
+// help
+// .help {
+//     .help-list {
+//         margin: auto;
+//     }
+// }
+// footer
+// .footer {
+//     .wrap {
+//         padding: 40px 40px 0px 40px;
+//     }
+//     .content {
+//         flex-wrap: wrap;
+//     }
+// }
+// .donation {
+// height: auto;
+// .wrap {
+//     justify-content: center;
+//     flex-wrap: wrap-reverse;
+// }
+// .content__img {
+//     @include smooth-adaptive('width',
+//     505,
+//     260,
+//     320,
+//     768);
+// }
+//     .content__info {
+//         max-width: 380px;
+//     }
+// }

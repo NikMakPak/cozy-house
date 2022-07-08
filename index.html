@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/main/main.css">
+    <link rel="shortcut icon" href="./img/tab-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="normalize.css">
-    <title>Main</title>
+    <title>Cozy House - About</title>
 </head>
 
 <body>
-    <section class="frame-1280">
-        <div class="welcome">
+    <div class="frame">
+        <section class="welcome">
             <div class="wrap">
                 <header class="header">
                     <a href="index.html" class="logo">
@@ -20,12 +21,24 @@
                         <p class="logo__subtitle">Shelter for pets in Boston</p>
                     </a>
                     <nav class="nav">
+                        <button class="nav__burger">
+                            <img src="./img/Burger.png" alt="burger menu">
+                        </button>
                         <ul class="nav__menu">
                             <li class="nav__link nav__link_active">About the shelter</li>
                             <li class="nav__link"><a href="./pages/pets/index.html">Our pets</a></li>
                             <li class="nav__link"><a href="#help">Help the shelter</a></li>
                             <li class="nav__link"><a href="#contacts">Contacts</a></li>
                         </ul>
+                        <div class="burger__sidebar">
+                            <div class="sidebar__shadow"></div>
+                            <ul class="nav__menu" id="menu">
+                                <li class="nav__link nav__link_active">About the shelter</li>
+                                <li class="nav__link"><a href="./pages/pets/index.html">Our pets</a></li>
+                                <li class="nav__link"><a href="#help">Help the shelter</a></li>
+                                <li class="nav__link"><a href="#contacts">Contacts</a></li>
+                            </ul>
+                        </div>
                     </nav>
                 </header>
                 <div class="poster">
@@ -34,17 +47,19 @@
                             <h2>Not only people <br>need a house</h2>
                         </div>
                         <p class="tagline__subhead">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                        <button type="submit" onclick="window.location.href='#friend'" class="btn">Make a friend</button>
+                        <div class="btn_center">
+                            <button class="btn" type="submit" onclick="window.location.href='#friend'">Make a friend</button>
+                        </div>
                     </div>
                     <img src="./img/start-screen-puppy.png" alt="a dog is waiting owner">
                 </div>
             </div>
-        </div>
-    </section>
-    <main class="frame-1280">
+        </section>
+    </div>
+    <main class="frame">
         <section class="about">
             <div class="wrap">
-                <img src="./img/about-pets.png" height="408px" alt="pet and cat together">
+                <img class="content__img" src="./img/about-pets.png" height="408px" alt="pet and cat together">
                 <div class="content">
                     <div class="content__head">
                         <h2>About the shelter <br> “Cozy House”</h2>
@@ -56,8 +71,7 @@
 
             </div>
         </section>
-        <a name="friend"></a>
-        <section class="pets">
+        <section id="friend" class="pets">
             <div class="wrap">
                 <div class="content">
                     <div class="content__head">
@@ -66,7 +80,6 @@
 
                     <div class="slider">
                         <button class="slider__arrow border-btn_hover">&#8592;</button>
-                        <!-- <img class="slider__arrow" src="./img/button_arrow.png" alt="arrow left"> -->
                         <div class="slider__wrap">
                             <div class="card">
                                 <img src="./img/pets-katrine.png" alt="pet">
@@ -92,15 +105,19 @@
                                 <button type="submit" class="btn card__btn">Learn more</button>
                             </div>
                         </div>
+                        <!-- mobile -->
+                        <div class="sliders__arrow_mobile">
+                            <button class="slider__arrow border-btn_hover arrow_mobile">&#8592;</button>
+                            <button class="slider__arrow border-btn_hover arrow_mobile">&#8594;</button>
+                        </div>
+                        <!-- mobile -->
                         <button class="slider__arrow border-btn_hover">&#8594;</button>
-                        <!-- <img class="slider__arrow" src="./img/button_arrow.png" alt="arrow left"> -->
                     </div>
 
                     <button onclick="window.location.href='./pages/pets/index.html'" type="submit" class="btn">Get to know the rest</button>
                 </div>
         </section>
-        <a name="help"></a>
-        <section class="help">
+        <section id="help" class="help">
             <div class="wrap">
                 <div class="head">
                     <h2>How you can help<br> our shelter</h2>
@@ -138,10 +155,10 @@
         </section>
         <section class="donation">
             <div class="wrap">
-                <img src="./img/donation-dog.png" alt="cute dog for making donation">
+                <img class="content__img" src="./img/donation-dog.png" alt="cute dog for making donation">
                 <div class="content">
                     <div class="content__head">
-                        <h2>You can also make a donation</h2>
+                        <h2>You can also <br> make a donation</h2>
                     </div>
                     <p class="content__subhead">Name of the bank / Type of bank account</p>
                     <a href="#" class="credit-card">
@@ -154,12 +171,11 @@
             </div>
         </section>
     </main>
-    <a name="contacts"></a>
-    <section class="frame-1280">
+    <section id="contacts" class="frame">
         <footer class="footer">
             <div class="wrap">
                 <div class="content">
-                    <div class="contacts content_flex">
+                    <div class="contacts contacts_flex">
                         <div class="contacts__head">
                             <h2>For questions and suggestions</h2>
                         </div>
@@ -172,7 +188,7 @@
                             <p class="content__text">+13 674 567 75 54</p>
                         </a>
                     </div>
-                    <div class="location content_flex">
+                    <div class="location contacts_flex">
                         <div class="location__head">
                             <h2>We are waiting for your visit</h2>
                         </div>
@@ -185,11 +201,12 @@
                             <p class="content__text">18 South Park, London</p>
                         </a>
                     </div>
-                    <img src="./img/footer-puppy.png" alt="puppy show it's paw">
+                    <img class="content__img" src="./img/footer-puppy.png" alt="puppy show it's paw">
                 </div>
             </div>
         </footer>
     </section>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

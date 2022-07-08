@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pets.css">
+    <link rel="shortcut icon" href="../../img/tab-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/pets.css">
     <link rel="stylesheet" href="../../normalize.css">
-    <title>Pets</title>
+    <title>Cozy House - Pets</title>
 </head>
 
 <body>
@@ -19,17 +20,29 @@
                     <p class="logo__subtitle">Shelter for pets in Boston</p>
                 </a>
                 <nav class="nav">
+                    <button class="nav__burger">
+                        <img src="../../img/Burger-black.png" alt="burger menu">
+                    </button>
                     <ul class="nav__menu">
                         <li class="nav__link"><a href="../../index.html">About the shelter</a></li>
                         <li class="nav__link nav__link_active">Our pets</li>
                         <li class="nav__link"><a href="../../index.html#help">Help the shelter</a></li>
                         <li class="nav__link"><a href="#contacts">Contacts</a></li>
                     </ul>
+                    <div class="burger__sidebar">
+                        <div class="sidebar__shadow"></div>
+                        <ul class="nav__menu" id="menu">
+                            <li class="nav__link"><a href="../../index.html">About the shelter</a></li>
+                            <li class="nav__link nav__link_active">Our pets</li>
+                            <li class="nav__link"><a href="../../index.html#help">Help the shelter</a></li>
+                            <li class="nav__link"><a href="#contacts">Contacts</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
         </div>
     </div>
-    <main class="frame-1280">
+    <main class="frame">
         <section class="pets">
             <div class="wrap">
                 <div class="head">
@@ -112,12 +125,11 @@
             </div>
         </section>
     </main>
-    <a name="contacts"></a>
-    <section class="frame-1280">
+    <section id="contacts" class="frame">
         <footer class="footer">
             <div class="wrap">
                 <div class="content">
-                    <div class="contacts content_flex">
+                    <div class="contacts contacts_flex">
                         <div class="contacts__head">
                             <h2>For questions and suggestions</h2>
                         </div>
@@ -130,7 +142,7 @@
                             <p class="content__text">+13 674 567 75 54</p>
                         </a>
                     </div>
-                    <div class="location content_flex">
+                    <div class="location contacts_flex">
                         <div class="location__head">
                             <h2>We are waiting for your visit</h2>
                         </div>
@@ -143,11 +155,12 @@
                             <p class="content__text">18 South Park, London</p>
                         </a>
                     </div>
-                    <img src="../../img/footer-puppy.png" alt="puppy show it's paw">
+                    <img class="content__img" src="../../img/footer-puppy.png" alt="puppy show it's paw">
                 </div>
             </div>
         </footer>
     </section>
+    <script src="../../js/script.js"></script>
 </body>
 
 </html>

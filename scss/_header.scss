@@ -1,7 +1,71 @@
-// header frame-1280 ====================================
+// logic, functions ====================================
+@mixin flex-center($method) {
+    display: flex;
+    @if $method=='main' {
+        justify-content: center;
+    }
+    @else if $method=='cross' {
+        align-items: center;
+    }
+    @else if $method=='' {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin fontGeorgia {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+
+@mixin fontArial {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+
+@mixin smooth-adaptive($css, $startSize, $minSize, $minScreen, $maxWidthContainer) {
+    $addSize: $startSize - $minSize;
+    #{$css}: $startSize + px;
+    @media (max-width: #{$maxWidthContainer + px}) {
+        #{$css}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minScreen + px}) / #{$maxWidthContainer - $minScreen}));
+    }
+}
+
+@mixin smooth-adaptive-num($css, $minSize, $minScreen, $maxWidthContainer) {
+    $addSize: $startSize - $minSize;
+    #{$css}:calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minScreen + px}) / #{$maxWidthContainer - $minScreen}));
+}
+
+// variables ====================================
+$primar-color:#F1CDB3;
+$main-color:#fff;
+$txt-color:#4C4C4C;
+$postersub-color:#CDCDCD;
+$btn-color:$primar-color;
+$btn-txt-color:#292929;
+$active-nav-color:#FAFAFA;
+$content-head-txt-color:#545454;
+$bg-section-color:#F6F6F6;
+$hell-text-color:#B2B2B2;
+$hover-color:#FDDCC4;
+$animation-time:.5s;
+// header frame ====================================
 .header {
     @include flex-center(cross);
     justify-content: space-between;
+    height: 60px;
+}
+
+.logo {
+    transition: $animation-time;
+}
+
+.logo_hide {
+    opacity: 0;
 }
 
 .logo__title {
@@ -17,11 +81,70 @@
     margin: 11px 0 0 3px;
 }
 
+.nav__burger {
+    position: relative;
+    z-index: 2;
+    display: none;
+    @media (max-width: 768px) {
+        transition: $animation-time;
+        display: block;
+        margin-right: 43px;
+    }
+}
+
+.burger_rotate {
+    transform: rotate(-90deg);
+}
+
+.burger__sidebar {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 823px;
+    background-color: $btn-txt-color;
+    z-index: 1;
+    transition: $animation-time;
+    .nav__menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 115px 0;
+        font-size: 32px;
+        line-height: 51px;
+        gap: 43px;
+    }
+}
+
+.sidebar__shadow {
+    position: sticky;
+    top: 0;
+    background-color: $btn-txt-color;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 12px 80px 88px $btn-txt-color;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.sidebar_active {
+    right: 0;
+}
+
 .nav__menu {
     @include flex-center(cross);
     font-size: 13px;
     line-height: 24px;
     gap: 35px;
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .nav__link {
