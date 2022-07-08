@@ -14,6 +14,6 @@
 4. JSON и DOM
 5. Адаптивная и резиновая верстка
 - _Демонстрация_: 
-?
+https://nikmakpak.github.io/cozy-house/
 - _PDF_: 
-?
+https://github.com/NikMakPak/cozy-house/blob/main/COZY.pdf
