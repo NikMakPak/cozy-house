@@ -1,0 +1,40 @@
+// footer frame-1280 ====================================
+.footer {
+    background: url(../../img/footer-background.png);
+    height: 350px;
+    width: 100%;
+    .wrap {
+        margin: 40px 40px 0 40px;
+        text-align: left;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        .content_flex {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 280px;
+            margin-top: 16px;
+        }
+        h2 {
+            font-size: 35px;
+            color: $main-color;
+        }
+        .contacts_center {
+            @include flex-center(cross);
+            gap: 20px;
+        }
+        .content__text {
+            @include fontGeorgia();
+            font-size: 20px;
+            line-height: 23px;
+            color: $primar-color;
+            width: 260px;
+        }
+        .location {
+            gap: 33px;
+            width: 302px;
+        }
+    }
+}

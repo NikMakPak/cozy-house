@@ -1,0 +1,458 @@
+.frame-1280 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 35px;
+  line-height: 45px;
+  color: #545454;
+}
+
+.btn {
+  background: #F1CDB3;
+  border-radius: 100px;
+  width: 207px;
+  height: 52px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 17px;
+  line-height: 22px;
+  color: #292929;
+  cursor: pointer;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrap {
+  margin: 80px 40px 100px 40px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo__title {
+  font-size: 32px;
+  line-height: 35px;
+  color: #F1CDB3;
+}
+
+.logo__subtitle {
+  letter-spacing: 0.1em;
+  line-height: 15px;
+  font-size: 13px;
+  margin: 11px 0 0 3px;
+}
+
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  line-height: 24px;
+  gap: 35px;
+}
+
+.nav__link {
+  color: #CDCDCD;
+}
+
+.nav__link_active {
+  border-bottom: 3px solid #F1CDB3;
+  color: #FAFAFA;
+}
+
+.footer {
+  background: url(../../img/footer-background.png);
+  height: 350px;
+  width: 100%;
+}
+
+.footer .wrap {
+  margin: 40px 40px 0 40px;
+  text-align: left;
+}
+
+.footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .content .content_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  width: 280px;
+  margin-top: 16px;
+}
+
+.footer .content h2 {
+  font-size: 35px;
+  color: #fff;
+}
+
+.footer .content .contacts_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.footer .content .content__text {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 20px;
+  line-height: 23px;
+  color: #F1CDB3;
+  width: 260px;
+}
+
+.footer .content .location {
+  gap: 33px;
+  width: 302px;
+}
+
+.slider {
+  height: 435px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  width: 270px;
+  height: 435px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  background: #FAFAFA;
+  border-radius: 9px;
+}
+
+.card .card__btn {
+  background-color: #fff;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  width: 187px;
+  height: 52px;
+}
+
+.card h2 {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.slider__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
+  margin: 0 53px;
+}
+
+.arrow {
+  cursor: pointer;
+  height: 52px;
+}
+
+.slider__arrow-right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.btn {
+  width: 261px;
+}
+
+.welcome {
+  width: 100%;
+  height: 908px;
+  background: url(../../img/header-background.png);
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+
+.welcome .wrap {
+  margin: 60px 40px 0 40px;
+}
+
+.welcome .poster {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+}
+
+.welcome .tagline {
+  margin-top: 163px;
+  width: 460px;
+}
+
+.welcome .tagline .btn {
+  width: 207px;
+}
+
+.welcome .tagline__head h2 {
+  letter-spacing: normal;
+  color: #fff;
+  font-size: 44px;
+  line-height: 57px;
+}
+
+.welcome .tagline__subhead {
+  margin: 42px 0;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  letter-spacing: normal;
+  color: #CDCDCD;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.about {
+  width: 100%;
+  height: 588px;
+  background-color: #fff;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  letter-spacing: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #4C4C4C;
+}
+
+.about .wrap {
+  margin: 72px 0 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 120px;
+}
+
+.about .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  width: 430px;
+}
+
+.about .content:nth-child(2) {
+  margin: 25px 0;
+}
+
+.pets {
+  width: 100%;
+  height: 877px;
+  background-color: #F6F6F6;
+}
+
+.pets .wrap {
+  text-align: center;
+}
+
+.pets .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+}
+
+.help {
+  height: 611px;
+  background-color: #fff;
+}
+
+.help .wrap {
+  text-align: center;
+}
+
+.help .head {
+  margin-bottom: 60px;
+}
+
+.help .help-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 52px 120px;
+  height: 281px;
+  width: 1030px;
+}
+
+.help .help-list .elem img {
+  margin-bottom: 30px;
+}
+
+.help .help-list .elem p {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 20px;
+  line-height: 23px;
+  color: #545454;
+}
+
+.donation {
+  height: 462px;
+  background-color: #F6F6F6;
+}
+
+.donation .wrap {
+  margin: 80px 182px 100px 183px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 30px;
+}
+
+.donation .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px 0;
+  text-align: left;
+}
+
+.donation .content__head {
+  width: 300px;
+}
+
+.donation p {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+  line-height: 17px;
+  color: #545454;
+}
+
+.donation .credit-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  width: 349px;
+  background-color: #F1CDB3;
+  border-radius: 9px;
+  padding: 10px 0;
+}
+
+.donation .credit-card p {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.donation .content__info {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  font-style: italic;
+  font-size: 11px;
+  line-height: 18px;
+  color: #B2B2B2;
+}
+/*# sourceMappingURL=main.css.map */

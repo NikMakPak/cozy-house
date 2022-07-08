@@ -1,0 +1,75 @@
+// logic, functions ====================================
+@mixin flex-center($method) {
+    display: flex;
+    @if $method=='main' {
+        justify-content: center;
+    }
+    @else if $method=='cross' {
+        align-items: center;
+    }
+    @else if $method=='' {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin fontGeorgia {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+
+@mixin fontArial {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+
+// variables ====================================
+$primar-color:#F1CDB3;
+$main-color:#fff;
+$txt-color:#4C4C4C;
+$postersub-color:#CDCDCD;
+$btn-color:$primar-color;
+$btn-txt-color:#292929;
+$active-nav-color:#FAFAFA;
+$content-head-txt-color:#545454;
+$bg-section-color:#F6F6F6;
+$hell-text-color:#B2B2B2;
+// global styles ====================================
+.frame-1280 {
+    @include flex-center(cross);
+    flex-direction: column;
+    width: 1280px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    @include fontGeorgia();
+    font-size: 35px;
+    line-height: 45px;
+    color: $content-head-txt-color;
+}
+
+.btn {
+    background: $btn-color;
+    border-radius: 100px;
+    width: 207px;
+    height: 52px;
+    @include fontGeorgia();
+    font-size: 17px;
+    line-height: 22px;
+    color: $btn-txt-color;
+    cursor: pointer;
+}
+
+img {
+    object-fit: cover;
+}
+
+.wrap {
+    margin: 80px 40px 100px 40px;
+}

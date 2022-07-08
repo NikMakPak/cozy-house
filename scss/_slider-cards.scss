@@ -1,0 +1,46 @@
+// slider-cards frame-1280 ====================================
+.slider {
+    height: 435px;
+    display: flex;
+    @include flex-center(cross);
+}
+
+.card {
+    width: 270px;
+    height: 435px;
+    @include flex-center(cross);
+    flex-direction: column;
+    gap: 30px;
+    background: $active-nav-color;
+    border-radius: 9px;
+    .card__btn {
+        background-color: $main-color;
+        border: 2px solid $primar-color;
+        border-radius: 100px;
+        width: 187px;
+        height: 52px;
+    }
+    h2 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
+.slider__wrap {
+    display: flex;
+    gap: 90px;
+    margin: 0 53px;
+}
+
+.arrow {
+    cursor: pointer;
+    height: 52px;
+}
+
+.slider__arrow-right {
+    transform: rotate(180deg);
+}
+
+.btn {
+    width: 261px;
+}
