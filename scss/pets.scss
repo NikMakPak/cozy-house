@@ -1,7 +1,9 @@
 @import "global";
 @import "header";
 @import "footer";
-@import "slider-cards";
+@import "card";
+@import "popup";
+@import "pagination";
 // logic, functions ====================================
 @mixin flex-center($method) {
     display: flex;
@@ -72,10 +74,10 @@ body {
     color: $content-head-txt-color;
     .wrap {
         margin: 30px 40px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             margin: 30px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             margin: 30px 10px 30px;
         }
     }
@@ -117,7 +119,7 @@ body {
     @media (min-width: 1280px) {
         width: 1280px;
     }
-    @include smooth-adaptive('width', 1280, 768, 768, 1280)
+    @include smooth-adaptive('width', 1280, 768, 768, 1279)
 }
 
 .pets {
@@ -128,11 +130,11 @@ body {
         @include flex-center(cross);
         flex-direction: column;
         gap: 45px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             gap: 30px;
             padding: 80px 30px 75px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding: 42px 10px;
             gap: 42px;
         }
@@ -144,10 +146,10 @@ body {
         display: flex;
         gap: 20px;
         margin-top: 15px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             margin-top: 10px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             gap: 10px;
             margin-top: 0;
         }
@@ -155,7 +157,7 @@ body {
     .cards {
         width: 100%;
         margin-top: 15px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             margin: 0;
         }
     }
@@ -165,12 +167,12 @@ body {
         gap: 30px 40px;
         flex-wrap: wrap;
     }
-    @media (max-width: 1280px) {
+    @media (max-width: 1279px) {
         .card:nth-last-child(-n+2) {
             display: none;
         }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .card:nth-last-child(-n+5) {
             display: none;
         }
@@ -201,8 +203,8 @@ body {
     @media (min-width: 1280px) {
         width: 1280px;
     }
-    @include smooth-adaptive('width', 1280, 768, 768, 1280);
-    @media (max-width: 768px) {
+    @include smooth-adaptive('width', 1280, 768, 768, 1279);
+    @media (max-width: 767px) {
         .content {
             .contacts_flex {
                 margin: 0;

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.">
+    <meta name="keywords" content="shelter pets help donate">
+    <meta name="robots" content="all">
     <link rel="shortcut icon" href="../../img/tab-icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/pets.css">
     <link rel="stylesheet" href="../../normalize.css">
@@ -25,7 +28,7 @@
                     </button>
                     <ul class="nav__menu">
                         <li class="nav__link"><a href="../../index.html">About the shelter</a></li>
-                        <li class="nav__link nav__link_active">Our pets</li>
+                        <li class="nav__link nav__link_active"><a href="./index.html">Our pets</a></li>
                         <li class="nav__link"><a href="../../index.html#help">Help the shelter</a></li>
                         <li class="nav__link"><a href="#contacts">Contacts</a></li>
                     </ul>
@@ -34,7 +37,7 @@
                         <div class="sidebar__shadow"></div>
                         <ul class="nav__menu" id="menu">
                             <li class="nav__link"><a href="../../index.html">About the shelter</a></li>
-                            <li class="nav__link nav__link_active">Our pets</li>
+                            <li class="nav__link nav__link_active"><a href="./index.html">Our pets</a></li>
                             <li class="nav__link"><a href="../../index.html#help">Help the shelter</a></li>
                             <li class="nav__link"><a href="#contacts">Contacts</a></li>
                         </ul>
@@ -52,25 +55,9 @@
                 <div class="cards">
                     <div class="slider__wrap">
                         <div class="card">
-                            <img src="../../img/pets-katrine.png" alt="pet">
-                            <div class="card__name">
-                                <h2>Katrine</h2>
-                            </div>
-                            <button type="submit" class="btn card__btn">Learn more</button>
-                        </div>
-
-                        <div class="card">
                             <img src="../../img/pets-jennifer.png" alt="pet">
                             <div class="card__name">
                                 <h2>Jennifer</h2>
-                            </div>
-                            <button type="submit" class="btn card__btn">Learn more</button>
-                        </div>
-
-                        <div class="card">
-                            <img src="../../img/pets-woody.png" alt="pet">
-                            <div class="card__name">
-                                <h2>Woody</h2>
                             </div>
                             <button type="submit" class="btn card__btn">Learn more</button>
                         </div>
@@ -84,17 +71,9 @@
                         </div>
 
                         <div class="card">
-                            <img src="../../img/pets-timmy.png" alt="pet">
+                            <img src="../../img/pets-woody.png" alt="pet">
                             <div class="card__name">
-                                <h2>Timmy</h2>
-                            </div>
-                            <button type="submit" class="btn card__btn">Learn more</button>
-                        </div>
-
-                        <div class="card">
-                            <img src="../../img/pets-charly.png" alt="pet">
-                            <div class="card__name">
-                                <h2>Charly</h2>
+                                <h2>Woody</h2>
                             </div>
                             <button type="submit" class="btn card__btn">Learn more</button>
                         </div>
@@ -108,20 +87,44 @@
                         </div>
 
                         <div class="card">
+                            <img src="../../img/pets-katrine.png" alt="pet">
+                            <div class="card__name">
+                                <h2>Katrine</h2>
+                            </div>
+                            <button type="submit" class="btn card__btn">Learn more</button>
+                        </div>
+
+                        <div class="card">
+                            <img src="../../img/pets-timmy.png" alt="pet">
+                            <div class="card__name">
+                                <h2>Timmy</h2>
+                            </div>
+                            <button type="submit" class="btn card__btn">Learn more</button>
+                        </div>
+
+                        <div class="card">
                             <img src="../../img/pets-freddie.png" alt="pet">
                             <div class="card__name">
                                 <h2>Freddie</h2>
                             </div>
                             <button type="submit" class="btn card__btn">Learn more</button>
                         </div>
+
+                        <div class="card">
+                            <img src="../../img/pets-charly.png" alt="pet">
+                            <div class="card__name">
+                                <h2>Charly</h2>
+                            </div>
+                            <button type="submit" class="btn card__btn">Learn more</button>
+                        </div>
                     </div>
                 </div>
                 <div class="nav-btns">
-                    <button class="nav-btns__btn border-btn_hover" id="btn_not-active" disabled>&lt;&lt;</button>
-                    <button class="nav-btns__btn border-btn_hover" id="btn_not-active" disabled>&#60;</button>
-                    <button class="nav-btns__btn btn_fill">1</button>
-                    <button class="nav-btns__btn border-btn_hover">&gt;</button>
-                    <button class="nav-btns__btn border-btn_hover">&gt;&gt;</button>
+                    <button class="nav-btns__btn border-btn_hover btn_home" id="btn_not-active">&lt;&lt;</button>
+                    <button class="nav-btns__btn border-btn_hover btn_left" id="btn_not-active">&#60;</button>
+                    <button class="nav-btns__btn btn_fill page-num">1</button>
+                    <button class="nav-btns__btn border-btn_hover btn_right">&gt;</button>
+                    <button class="nav-btns__btn border-btn_hover btn_end">&gt;&gt;</button>
                 </div>
             </div>
         </section>
@@ -161,7 +164,39 @@
             </div>
         </footer>
     </section>
-    <script src="../../js/script.js"></script>
+    
+    <div class="popup">
+        <div class="popup__container">
+            <div class="popup__body">
+                <img src="../../img/pets-jennifer.png" alt="">
+                <div class="popup__content">
+                    <div class="content__head">
+                        <h2>Jennifer</h2>
+                        <p>Dog - Labrador</p>
+                    </div>
+                    <p class="content__main">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of
+                        her favorite toys.</p>
+                    <ul class="popup__info">
+                        <li class="item">
+                            <p><b>Age: </b><span class="item__info">2 months</span></p>
+                        </li>
+                        <li class="item">
+                            <p><b>Inoculations: </b><span class="item__info">none</span></p>
+                        </li>
+                        <li class="item">
+                            <p><b>Diseases: </b><span class="item__info">none</span></p>
+                        </li>
+                        <li class="item">
+                            <p><b>Parasites: </b><span class="item__info">none</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="popup__close-btn btn">&#10006</button>
+            </div>
+
+        </div>
+    </div>
+    <script type="module" src="../../js/script-pets.js"></script>
 </body>
 
 </html>

@@ -2,6 +2,8 @@
 @import "header";
 @import "footer";
 @import "slider-cards";
+@import "popup";
+@import "card";
 @mixin smooth-adaptive($css, $startSize, $minSize, $minScreen, $maxWidthContainer) {
     $addSize: $startSize - $minSize;
     #{$css}: $startSize + px;
@@ -22,10 +24,10 @@
     color: $main-color;
     .wrap {
         padding: 60px 40px 0px 40px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             padding: 30px 30px 0 30px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding: 30px 10px 0 10px;
         }
     }
@@ -33,20 +35,20 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             .btn_center {
                 text-align: center;
             }
             gap: 100px;
             justify-content: center;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             gap: 105px;
             @include smooth-adaptive-num('gap',
             100,
             105,
             320,
-            768);
+            767);
         }
         margin-top: 60px;
         img {
@@ -54,29 +56,29 @@
             698,
             569,
             768,
-            1280);
-            @media (max-width: 1280px) {
+            1279);
+            @media (max-width: 1279px) {
                 margin-left: 140px;
             }
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 margin-left: 40px;
                 @include smooth-adaptive-num('width',
                 569,
                 260,
                 320,
-                768);
+                767);
             }
         }
     }
     .tagline {
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             margin-top: 0;
         }
         @include smooth-adaptive('width',
         460,
         300,
         320,
-        768);
+        767);
         margin-top: 163px;
         width: 460px;
         .btn {
@@ -88,13 +90,13 @@
         font-size: 44px;
         line-height: 57px;
         letter-spacing: -0.01em;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             font-size: 25px;
             line-height: 32px;
         }
     }
     .tagline__subhead {
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             text-align: center;
         }
         margin: 42px 0;
@@ -107,7 +109,7 @@
         460,
         300,
         320,
-        768);
+        767);
     }
 }
 
@@ -124,22 +126,22 @@
             300,
             260,
             320,
-            768);
+            767);
             @include smooth-adaptive('height',
             408,
             354,
             320,
-            768);
-            @media (max-width: 768px) {
+            767);
+            @media (max-width: 767px) {
                 margin-top: -4px;
             }
         }
         @include flex-center(main);
         flex-wrap: wrap-reverse;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             flex-direction: column-reverse;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding: 42px 25px;
         }
         align-items: center;
@@ -148,14 +150,14 @@
         120,
         80,
         768,
-        1280);
+        1279);
     }
     .content {
         display: flex;
         flex-direction: column;
         gap: 25px;
         max-width: 430px;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             gap: 23px;
         }
     }
@@ -177,11 +179,11 @@
         gap: 60px;
     }
     .card:nth-child(3) {
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             display: none;
         }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .card:nth-child(2),
         .slider__arrow {
             display: none;
@@ -189,7 +191,7 @@
     }
     .sliders__arrow_mobile {
         display: none;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             @include flex-center(cross);
             margin-top: 20px;
             gap: 80px;
@@ -198,7 +200,7 @@
             }
         }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .slider {
             flex-direction: column;
         }
@@ -215,10 +217,10 @@
     background-color: $main-color;
     .head {
         margin-bottom: 60px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             margin-bottom: 57px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             margin-bottom: 36px;
         }
     }
@@ -228,27 +230,27 @@
         flex-wrap: wrap;
         gap: 52px 120px;
         margin: auto;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             gap: 55px 60px;
             width: 630px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             gap: 30px;
             width: 290px;
             justify-content: start;
         }
         .elem {
-            @media (max-width: 1280px) {
+            @media (max-width: 1279px) {
                 width: 170px;
                 height: 113px;
             }
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 width: 130px;
                 height: 87px;
             }
             img {
                 margin-bottom: 26px;
-                @media (max-width: 768px) {
+                @media (max-width: 767px) {
                     margin-bottom: 20px;
                     width: 50px;
                 }
@@ -258,7 +260,7 @@
                 font-size: 20px;
                 line-height: 23px;
                 color: $content-head-txt-color;
-                @media (max-width: 768px) {
+                @media (max-width: 767px) {
                     font-size: 15px;
                     line-height: 17px;
                     text-align: center;
@@ -275,11 +277,11 @@
         text-align: left;
         @include flex-center(cross);
         gap: 0 30px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             flex-direction: column-reverse;
             gap: 60px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             text-align: center;
             align-items: center;
             gap: 42px;
@@ -291,7 +293,7 @@
         display: flex;
         flex-direction: column;
         gap: 20px 0;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             align-items: center;
         }
     }
@@ -303,14 +305,14 @@
         505,
         260,
         320,
-        768);
+        767);
     }
     p {
         @include fontGeorgia();
         font-size: 15px;
         line-height: 17px;
         color: $content-head-txt-color;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             letter-spacing: normal;
             line-height: 24px;
         }
@@ -323,7 +325,7 @@
         349,
         281,
         320,
-        768);
+        767);
         max-width: 349px;
         background-color: $primar-color;
         border-radius: 9px;
@@ -332,7 +334,7 @@
         p {
             font-size: 20px;
             line-height: 23px;
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 font-size: 15px;
                 line-height: 17px;
                 letter-spacing: 0.06em;
@@ -349,49 +351,9 @@
         line-height: 18px;
         color: $hell-text-color;
         max-width: 380px;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             letter-spacing: 0.03em;
             padding: 0 10px;
         }
     }
 }
-
-// .header {
-//     height: 60px;
-// }
-// about
-// .about .content:nth-child(2) {
-//     margin: 0;
-// }
-// help
-// .help {
-//     .help-list {
-//         margin: auto;
-//     }
-// }
-// footer
-// .footer {
-//     .wrap {
-//         padding: 40px 40px 0px 40px;
-//     }
-//     .content {
-//         flex-wrap: wrap;
-//     }
-// }
-// .donation {
-// height: auto;
-// .wrap {
-//     justify-content: center;
-//     flex-wrap: wrap-reverse;
-// }
-// .content__img {
-//     @include smooth-adaptive('width',
-//     505,
-//     260,
-//     320,
-//     768);
-// }
-//     .content__info {
-//         max-width: 380px;
-//     }
-// }
