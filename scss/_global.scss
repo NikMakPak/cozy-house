@@ -57,6 +57,10 @@ $popup-bg-color:rgba(41, 41, 41, 0.6);
 // global styles ====================================
 html {
     scroll-behavior: smooth;
+    
+}
+body{
+    overflow-x: hidden;
 }
 
 .frame {
@@ -65,7 +69,7 @@ html {
     .wrap {
         margin: 0;
         padding: 80px 40px 100px 40px;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding: 42px 10px;
             text-align: center;
         }
@@ -78,12 +82,12 @@ h2 {
     font-size: 35px;
     line-height: 130%;
     color: $content-head-txt-color;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         font-size: 25px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     p {
         text-align: justify;
     }

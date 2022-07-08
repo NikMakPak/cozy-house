@@ -4,11 +4,11 @@
     .wrap {
         padding: 40px 40px 0 40px;
         text-align: left;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             padding: 14px 63px 0 63px;
             @include flex-center(main);
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding: 30px 10px 0;
             text-align: center;
         }
@@ -19,17 +19,17 @@
             300,
             260,
             320,
-            768);
+            767);
         }
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        @media (max-width: 1280px) {
+        @media (max-width: 1279px) {
             max-width: 1000px;
             justify-content: space-around;
             gap: 65px 60px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             gap: 40px;
         }
         .contacts_flex {
@@ -38,7 +38,7 @@
             gap: 40px;
             width: 280px;
             margin-top: 16px;
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 align-items: center;
                 margin-top: 5px;
             }
@@ -46,7 +46,7 @@
         h2 {
             font-size: 35px;
             color: $main-color;
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 font-size: 25px;
                 line-height: 32px;
             }
@@ -61,7 +61,7 @@
             line-height: 23px;
             color: $primar-color;
             width: 260px;
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 width: auto;
                 text-align: left;
             }
@@ -70,7 +70,7 @@
             gap: 33px;
             width: 302px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .location__address {
                 width: 100%;
             }
